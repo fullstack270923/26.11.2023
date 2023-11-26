@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS 1 - const</title>
+</head>
+<body>
+    
+<script>
+
+    // 1 
+    // prompt a number , and parse int
+    // print zugi or e-zugi (even , odd)
+    // hint: % 2
+    let number = parseInt(prompt('Enter a number [zugi/e-zugi]: '))
+    if (number % 2 == 0) {
+        document.write(number + ' is even (zugi)')
+    }
+    else {
+        document.write(number + ' is odd (e-zugi)')
+    }
+    document.write('<br/>')
+
+    // 2
+    // prompt a number , and parse int
+    // print the ahadot digit
+    // hint: % 10
+    number = parseInt(prompt('Enter a number [ahadot]: '))
+    let ahadot = number % 10
+    document.write(number + ' his ahadot digit is ' + ahadot)
+    document.write('<br/>')
+
+    // 3
+    // bonus
+    // prompt a number, and parse int
+    // check if the ahadot digit is equal to the asarot
+    // hint: Math.floor
+    number = parseInt(prompt('Enter a number [meot-ahadot]: '))
+    // 782 % 10 = 2
+    // 782 : 10 = 78 2/10 ==> 2
+    ahadot = number % 10
+    // 782 : 10 = 78.2 -> parseInt(78.2) -> 78 % 10 = 8 (from 782)
+    const asarot =  parseInt(number / 10) % 10
+    if (ahadot == asarot) {
+        document.write(number + ' his ahadot equals to asarot')
+    }
+    else {
+        document.write(number + ' his ahadot NOT equals to asarot')
+    }
+    document.write('<br/>')    
+
+</script>
+
+</body>
+</html>
