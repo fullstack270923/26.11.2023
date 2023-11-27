@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS 1 - lists</title>
+</head>
+
+<body>
+
+    <script>
+
+        //               0   1    2         3       4
+        const list1 = [true, 1, 'itay', undefined, null]
+
+        const list2 = [1, 2, 3]
+        console.log('the first number is ' + list2[0]);
+
+        // create a list with names in length 10
+        // parseInt(prompt('Enter number'))
+        // if the number is between list range then print the list index item
+        // else print 'wrong index'
+        // list_names[number]
+
+        //                     0        1       2       3        4
+        const list_names = ['itay', 'danny', 'yossi', 'dana', 'shiran']
+
+        const index = parseInt(prompt('Enter index:'))
+
+        document.write(list_names + '<br/>')
+
+        if (index >= 0 && index < 5) {
+            document.write(list_names[index])
+        }
+        else {
+            document.write('out of range')
+        }
+
+        // name = prompt('enter a name: ') ==> 'yossi'
+        // if the name exist in the list then print its index
+        // i.e. if the user wrote 'yossi' you should print ==> 2
+        // if the name does not appear in the list ==> write 'cannot find the name'
+        //                       0        1       2       3        4
+        //const list_names = ['itay', 'danny', 'yossi', 'dana', 'shiran']        
+        const name_from_user = prompt('enter a name: ')
+        if (name_from_user == 'itay') {
+            document.write('the index is 0')
+        }
+        else if (name_from_user == 'danny') {
+            document.write('the index is 1')
+        }
+        else if (name_from_user == 'yossi') {
+            document.write('the index is 2')
+        }
+        else if (name_from_user == 'dana') {
+            document.write('the index is 3')
+        }
+        else if (name_from_user == 'shiran') {
+            document.write('the index is 4')
+        }                        
+        else {
+            document.write('cannot find the name')
+        }
+
+
+    </script>
+
+</body>
+
+</html>
