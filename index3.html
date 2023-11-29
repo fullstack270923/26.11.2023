@@ -37,11 +37,12 @@
     // hint: Math.floor
     number = parseInt(prompt('Enter a number [meot-ahadot]: '))
     // 782 % 10 = 2
-    // 782 : 10 = 78 2/10 ==> 2
+    // 782 : 10 = 782/10 ==> 78.2
+    // parseInt(78.2) ==> 78 % 10 = 7.8 -- 8
     ahadot = number % 10
     // 782 : 10 = 78.2 -> parseInt(78.2) -> 78 % 10 = 8 (from 782)
     const asarot =  parseInt(number / 10) % 10
-    if (ahadot == asarot) {
+    if (ahadot === asarot) {
         document.write(number + ' his ahadot equals to asarot')
     }
     else {
